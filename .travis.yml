@@ -4,6 +4,11 @@ php:
   - '7.0'
   - '7.1'
 
+# Adds code climate token
+addons:
+  code_climate:
+    repo_token: 2cd6870701c0f6276c6073b3293ccdf38666823818c160c84cf1fda74678a977
+
 # Installs required dependencies
 install:
   - composer install
@@ -16,3 +21,4 @@ script:
 # Sends data to coveralls
 after_success:
   - travis_retry php vendor/bin/coveralls -v
+  - travis_retry php vendor/bin/test-reporter
