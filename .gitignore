@@ -1,0 +1,10 @@
+# Folders
+build/
+reports/
+vendor/
+stub/application/bootstrap/cache
+
+# Files
+.php_cs.cache
+composer.lock
+composer.phar
