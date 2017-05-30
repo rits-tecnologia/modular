@@ -2,6 +2,7 @@
 language: php
 php:
   - '7.0'
+  - '7.1'
 
 # Installs required dependencies
 install:
@@ -10,7 +11,7 @@ install:
 
 # Defines build script
 script:
-  - vendor/bin/phpunit tests --coverage-clover build/logs/clover.xml
+  - vendor/bin/phpunit tests
 
 # Sends data to coveralls
 after_success:
