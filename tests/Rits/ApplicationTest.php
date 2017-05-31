@@ -8,7 +8,7 @@ use Tests\TestCase;
 class ApplicationTest extends TestCase
 {
     /**
-     * registry must return the fallback value if the key does'nt exist.
+     * Laravel application is successfully configured.
      */
     public function testCanCreateApplication()
     {

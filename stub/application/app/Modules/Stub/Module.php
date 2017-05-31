@@ -2,7 +2,7 @@
 
 namespace App\Modules\Stub;
 
-use Ferrl\Modular\ModuleDefinition;
+use Rits\Modular\ModuleDefinition;
 use Illuminate\Contracts\Routing\Registrar;
 
 class Module extends ModuleDefinition
@@ -13,7 +13,7 @@ class Module extends ModuleDefinition
      * @param Registrar $router
      * @return void
      */
-    public function bindRoutes(Registrar $router)
+    public function bindRoutes(Registrar $router): void
     {
         $router->get('/', ['as' => 'stub.index', 'uses' => 'DefaultController@index']);
     }
