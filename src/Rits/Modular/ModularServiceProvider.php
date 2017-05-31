@@ -32,7 +32,7 @@ class ModularServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(ModuleLoaderContract::class, function () {
-            return new ModuleLoader;
+            return new ModuleLoader($this->app);
         });
     }
 }
