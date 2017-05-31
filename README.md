@@ -8,4 +8,38 @@
 [![Latest Unstable Version](https://poser.pugx.org/rits/modular/v/unstable.svg)](https://packagist.org/packages/rits/modular)
 [![License](https://poser.pugx.org/rits/modular/license.svg)](https://packagist.org/packages/rits/modular)
 
-> **Note:** This repository contains a set of tools to be used alongside with the [Laravel Framework](https://github.com/laravel/framework). I won't be testing this tool as a standalone package, so I would'nt recommend you to do so.
+Offers a easy way to modularize your laravel app.
+
+## Installation
+
+Require this package with composer:
+
+```bash
+composer require rits/modular
+```
+
+After updating composer, add the ModularServiceProvider to the providers array in config/app.php. Use vendor:publish command to create the configuration file.
+
+```bash
+php artisan vendor:publish --tag=rits/modular
+```
+
+## Usage
+
+You can choose wherever you want to store your modules. In most cases app/Modules is a good choice. Create a class that extends the ModuleDefinition class, and add the class name in the modular.php config file.
+
+Example:
+
+- Create the app/Modules/Frontend/Module.php file;
+- Create the class with the correct namespace and extend Rits\Modular\ModuleDefinition;
+- Add App\Modules\Frontend\Module::class to the available array in the modular.php config file.
+
+## Restrictions
+
+All module's controllers must be in a Controllers folder in the module main directory.
+
+## Roadmap
+
+1. Create a command to easily create a new module;
+2. Rewrite the README.md with better examples;
+3. Provide a example repository.
