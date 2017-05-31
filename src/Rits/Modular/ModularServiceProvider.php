@@ -15,7 +15,7 @@ class ModularServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../../stub/tests/modular.php' => config_path('modular.php'),
+            __DIR__.'/../../../stub/application/config/modular.php' => config_path('modular.php'),
         ], 'rits/modular');
 
         /** @var ModuleLoaderContract $loader */
