@@ -43,7 +43,7 @@ abstract class ModuleDefinition implements ModuleDefinitionContract
      *
      * @return void
      */
-    protected function loadRoutes(): void
+    protected function loadRoutes()
     {
         /** @var Registrar $router */
         $router = $this->app->make('router');
@@ -59,7 +59,7 @@ abstract class ModuleDefinition implements ModuleDefinitionContract
      *
      * @param Application $app
      */
-    public function setApp(Application $app): void
+    public function setApp(Application $app)
     {
         $this->app = $app;
     }
@@ -82,5 +82,5 @@ abstract class ModuleDefinition implements ModuleDefinitionContract
      * @param Registrar $router
      * @return void
      */
-    abstract public function bindRoutes(Registrar $router): void;
+    abstract public function bindRoutes(Registrar $router);
 }

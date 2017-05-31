@@ -13,7 +13,7 @@ class Module extends ModuleDefinition
      * @param Registrar $router
      * @return void
      */
-    public function bindRoutes(Registrar $router): void
+    public function bindRoutes(Registrar $router)
     {
         $router->get('/', ['as' => 'stub.index', 'uses' => 'DefaultController@index']);
     }
